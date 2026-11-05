@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QuickView — How to use</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --fg: #1f2330;
+      --muted: #5c6170;
+      --line: #d8dbe7;
+      --accent: #0073ea;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", system-ui, sans-serif;
+      color: var(--fg);
+      background:
+        radial-gradient(900px 420px at 10% -10%, #e8f1ff 0%, transparent 60%),
+        radial-gradient(700px 360px at 100% 0%, #e9fbff 0%, transparent 55%),
+        var(--bg);
+      line-height: 1.55;
+    }
+    header {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 20px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .brand { font-weight: 800; letter-spacing: -0.03em; font-size: 20px; }
+    nav { display: flex; gap: 10px; flex-wrap: wrap; }
+    nav a {
+      text-decoration: none;
+      color: var(--fg);
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    nav a.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    main { max-width: 860px; margin: 0 auto; padding: 24px 20px 72px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 40px);
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+    }
+    h2 { margin: 0 0 10px; font-size: 20px; }
+    p, li { margin: 0 0 10px; }
+    .muted { color: var(--muted); }
+    ol, ul { padding-left: 20px; margin: 0 0 8px; }
+    footer {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">QuickView</div>
+    <nav>
+      <a class="active" href="./howto.html">How to use</a>
+      <a href="./pricing.html">Pricing</a>
+      <a href="./legal.html">Privacy &amp; Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>How to use QuickView</h1>
+      <p class="muted">
+        QuickView is a monday.com Board View. It lists column and item IDs so you can copy them for
+        automations, webhooks, and GraphQL. It does not draw badges on the Main Table.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>1. Install</h2>
+      <ol>
+        <li>Install QuickView from the monday Marketplace (or your share/install link).</li>
+        <li>Approve the requested scope: <strong>boards:read</strong>.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>2. Add the Board View</h2>
+      <ol>
+        <li>Open any board.</li>
+        <li>Next to <strong>Main Table</strong>, click <strong>+</strong> (Add view).</li>
+        <li>Choose <strong>QuickView</strong> / your Board View feature.</li>
+        <li>Open that view. The app only runs here.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>3. Columns tab</h2>
+      <ul>
+        <li>Browse all column IDs on the current board.</li>
+        <li>Click a row to copy the column ID.</li>
+        <li>Sort by type or board order. Collapse type groups with the chevron.</li>
+        <li>Use <strong>Copy all IDs</strong> (TSV) or <strong>Copy JSON</strong> (id to name map).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>4. Items tab</h2>
+      <ul>
+        <li>Search the whole board by name (server-side).</li>
+        <li>Paste a numeric item ID to look it up on this board.</li>
+        <li>Choose 25 / 50 / 100 per page and use Previous / Next.</li>
+        <li>Click a row to copy the item ID.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>5. IDs on the board tab</h2>
+      <p>
+        Optional: link to the separate Chrome extension Monday Tools for Main Table header/item
+        badges. The Marketplace Board View does not require the extension.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Support</h2>
+      <p>
+        Email: <a href="mailto:webxtl@hotmail.com">webxtl@hotmail.com</a><br />
+        Pricing: <a href="./pricing.html">pricing.html</a><br />
+        Legal: <a href="./legal.html">Privacy Policy &amp; Terms of Service</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>© 2026 QuickView for monday.com</footer>
+</body>
+</html>
